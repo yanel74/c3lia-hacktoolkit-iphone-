@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090611"><meta name="description" content="C3LIA HACKTOOLKIT — boîte à outils développeur et sécurité responsable">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+<title>C3LIA HACKTOOLKIT</title>
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar"><div class="brand"><div class="orb">C</div><div><b>C3LIA</b><small>HACKTOOLKIT <span>v1.0</span></small></div></div><button id="menuBtn" class="icon-btn" aria-label="Menu">☰</button></header>
+<div class="layout">
+<aside class="sidebar" id="sidebar"><div class="side-label">WORKSPACE</div>
+<button class="nav active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+<button class="nav" data-view="tools">⌘ <span>Developer tools</span></button>
+<button class="nav" data-view="security">⬡ <span>Security center</span></button>
+<button class="nav" data-view="discord">◈ <span>Discord bot helper</span></button>
+<button class="nav" data-view="settings">⚙ <span>Settings</span></button>
+<div class="side-foot">PURPLE GLASS UI<br><span>Safe mode enabled</span></div></aside>
+<main id="main">
+<section class="view" id="dashboard"><div class="hero"><div><div class="eyebrow">PERSONAL DEVELOPER WORKSPACE</div><h1>Build smarter.<br><em>Stay secure.</em></h1><p>Une boîte à outils locale pour développer, vérifier et organiser tes projets.</p><button class="primary" data-goto="tools">Explorer les outils <b>→</b></button></div><div class="hero-art"><div class="ring"></div><div class="core">C3</div><span class="float f1">JSON</span><span class="float f2">SHA-256</span><span class="float f3">BASE64</span></div></div>
+<div class="section-head"><div><div class="eyebrow">OVERVIEW</div><h2>Workspace</h2></div><span class="status"><i></i> Tous les outils prêts</span></div>
+<div class="cards"><article class="glass stat"><small>OUTILS DISPONIBLES</small><strong>06</strong><span>Utilitaires locaux</span></article><article class="glass stat"><small>MODE SÉCURITÉ</small><strong class="purple">ON</strong><span>Aucune action distante</span></article><article class="glass stat"><small>INSTALLATION</small><strong>PWA</strong><span>Ajout à l'écran d'accueil</span></article></div>
+<div class="glass notice"><b>✦ Confidentialité d'abord</b><p>Les outils de cette version fonctionnent dans ton navigateur. Aucun mot de passe, token ou contenu saisi n'est envoyé à un serveur.</p></div></section>
+<section class="view hidden" id="tools"><div class="eyebrow">TOOLBOX / LOCAL UTILITIES</div><h1>Developer <em>tools</em></h1><p class="muted">Choisis un utilitaire. Les traitements sont exécutés localement dans ton navigateur.</p>
+<div class="tool-grid">
+<article class="glass tool"><h3>⌗ JSON formatter</h3><p>Formate et valide du JSON.</p><textarea id="jsonInput" placeholder='{"hello":"world"}'></textarea><button class="primary small" id="formatJson">Formater</button><pre id="jsonOutput" class="output">Résultat ici…</pre></article>
+<article class="glass tool"><h3>⇄ Base64</h3><p>Encode ou décode du texte.</p><textarea id="b64Input" placeholder="Ton texte…"></textarea><div class="actions"><button class="primary small" id="b64Encode">Encoder</button><button class="secondary small" id="b64Decode">Décoder</button></div><pre id="b64Output" class="output">Résultat ici…</pre></article>
+<article class="glass tool"><h3>⛨ SHA-256</h3><p>Calcule l'empreinte d'un texte.</p><textarea id="hashInput" placeholder="Texte à hacher…"></textarea><button class="primary small" id="hashBtn">Calculer SHA-256</button><pre id="hashOutput" class="output">Empreinte ici…</pre></article>
+<article class="glass tool"><h3>⚿ Générateur de mot de passe</h3><p>Crée un mot de passe aléatoire localement.</p><label>Longueur <b id="lengthValue">20</b><input type="range" id="passLength" min="12" max="48" value="20"></label><button class="primary small" id="passBtn">Générer</button><pre id="passOutput" class="output">Mot de passe ici…</pre></article>
+<article class="glass tool"><h3>⌕ Analyse d'URL</h3><p>Repère quelques indices de lien suspect (analyse indicative, hors ligne).</p><textarea id="urlInput" placeholder="https://exemple.com"></textarea><button class="primary small" id="urlBtn">Analyser</button><pre id="urlOutput" class="output">Analyse ici…</pre></article>
+<article class="glass tool"><h3>▤ Notes de projet</h3><p>Notes enregistrées uniquement sur cet appareil.</p><textarea id="notes" placeholder="Tes idées, tâches, commandes non sensibles…"></textarea><span class="tiny" id="saveState">Sauvegarde locale automatique</span></article>
+</div></section>
+<section class="view hidden" id="security"><div class="eyebrow">SECURITY CENTER</div><h1>Secure by <em>design.</em></h1><div class="cards"><article class="glass stat"><strong>01</strong><h3>Vérifie les permissions</h3><p>Accorde uniquement les accès nécessaires à tes applications.</p></article><article class="glass stat"><strong>02</strong><h3>Protège tes secrets</h3><p>Ne colle jamais de token, mot de passe ou clé API dans un outil tiers.</p></article><article class="glass stat"><strong>03</strong><h3>Audite tes dépendances</h3><p>Utilise des versions maintenues et vérifie les avis de sécurité.</p></article></div><div class="glass notice"><b>Cadre d'utilisation</b><p>Cette suite est destinée à tes propres appareils, comptes et systèmes explicitement autorisés. Elle ne fournit ni DDoS, ni vol de tokens, ni automatisation de faux likes/abonnés, ni accès non autorisé.</p></div></section>
+<section class="view hidden" id="discord"><div class="eyebrow">COMMUNITY AUTOMATION</div><h1>Discord <em>bot helper.</em></h1><div class="glass notice"><b>Assistant de démarrage sécurisé</b><p>Prépare un bot Discord conforme aux règles de la plateforme. Héberge-le sur un serveur de confiance et ne partage jamais son token.</p><ol><li>Crée une application dans le Discord Developer Portal.</li><li>Ajoute un bot et active uniquement les intents nécessaires.</li><li>Stocke le token dans une variable d'environnement, jamais dans le code.</li><li>Utilise les commandes et interactions officielles, avec consentement des membres.</li></ol><a class="link" href="https://discord.com/developers/applications" target="_blank" rel="noopener">Ouvrir Discord Developer Portal ↗</a></div></section>
+<section class="view hidden" id="settings"><div class="eyebrow">PREFERENCES</div><h1>App <em>settings.</em></h1><div class="glass notice"><b>Installation iPhone</b><p>Dans Safari : bouton Partager → Sur l'écran d'accueil → Ajouter. Ouvre ensuite C3LIA depuis son icône.</p><button class="secondary" id="installHelp">Afficher les instructions</button></div><div class="glass notice"><b>À propos</b><p>C3LIA HACKTOOLKIT · v1.0 · Progressive Web App · Thème violet/noir Liquid Glass.</p><p>Les données des outils restent dans ton navigateur. Effacer les données du site peut supprimer les notes locales.</p></div></section>
+</main></div><footer>© 2026 C3LIA HACKTOOLKIT <span>BUILT FOR RESPONSIBLE DEVELOPMENT</span></footer>
+</div><div id="toast" role="status"></div><script src="app.js"></script></body></html>
